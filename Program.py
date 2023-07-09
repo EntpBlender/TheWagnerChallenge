@@ -1,26 +1,18 @@
 def script():
 
-    Num = int(input("Enter the number of different cards: "))
-    insertnum = 0
-    Array = []
-    for x in range(2*Num):
-        y = x+1
-        print(y)
-        #insertnum = insertnum + 1
-        #Array.append(insertnum)
+    InputNum = (int(input("Enter the number of different types of cards: ")))
+    CardNum = InputNum*4
+    Finished = False
 
-
-
-
-
-
-# CHECKING MAIN
-if __name__ == "__main__":
-    script()
-else:
-    print("Wrong file")
-
-
+    D2CardList = []
+    While Finished == False:
+        for x in range(CardNum):
+            TCardList = []
+            for y in range(InputNum):
+                TCardList.append(LetterReplacer(y))
+            for y in range(InputNum):
+                TCardList.append(LetterReplacer(y))
+            D2CardList.append(TCardList)
 
 
 
@@ -49,3 +41,11 @@ def LetterReplacer(Num):
             case 9:
                 return ("J")
 
+    
+
+
+# CHECKING MAIN
+if __name__ == "__main__":
+    script()
+else:
+    print("Wrong file")
